@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-color: aliceblue;
+   color: beige;
+}
+.head{
+    float: right;
+    height: 50px;
+    margin: 10px 10px 0px 0px ;
+    
+}
+.user{
+    font-size: x-large;
+}
+.head button{
+    width: 20vh;
+    margin: 0px 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+}
+.pop{
+    /* display: flex; */
+    width: 200px;
+    justify-content: end;
+    display: none;
+    float: right;
+    color: black;
+    margin: 50px 20px 0px;
+    box-shadow:  10px 10px 20px ;
+    border: 1px solid  rgb(11, 11, 99);
+}
+i{
+    color: black;
+}
+.popup{
+    width: 90%;
+    padding: 10px;
+}
+
+.head2{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 0px 0px;
+    margin-bottom: 5px;
+}
+.main{
+    display: flex;
+}
+.main i,span{
+    margin: 40px 15px 10px 5px;
+}
+.pop button{
+    padding: 2vh;
+    margin: 10px 10px;
+    background-color: rgb(108, 214, 247);
+    border-radius: 5px;
+    border: none;
+    color: rgb(8, 8, 8);
+    transition: 0s ease-in-out;
+}
+
+.pophead, button{
+    background-color: rgba(13, 110, 253, 1);
+    box-shadow: 2px 2px 5px black;
+    color: black;
+}
+.pophead, button:hover{
+    background-color: rgba(13, 110, 253, 1);
+    box-shadow: 2px 2px 5px black;
+    color: black;
+}
+.pophead, button:active{
+    background-color: rgba(13, 110, 253, 1);
+    box-shadow:inset 2px 2px 5px black;
+    color: black;
+}
+form{
+    margin: 200px 0px 0px   500px;
+    position: absolute;
+    height: auto;
+    /* border: 2px solid; */
+    /* display: none; */
+    justify-content: center;
+    align-content: end;    
+
+}
+
+.profile{
+    background-color: rgba(13, 110, 253, 1);
+
+    width: max-content;
+    box-shadow: 5px 5px 20px ;
+    padding: 30px;
+}
+
+.profile h1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.profile span{
+    display: block;
+    margin-top: 10px;
+}
+.profile input{
+    padding: 10px;
+    border: 1px solid;
+    height: 30px;
+    border-radius: 10px;
+}
+.profile button {
+    margin: 10px;
+    width: 5rem;
+    height: 2rem;
+}
+.edit{
+    display: flex;
+}
+/* sidebar */
+
+ 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signin.css') }}">
+    <style>
+        
+        .form{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            margin: auto;
+        }
+        #email{
+            display: inline;
+        }
+        .btn{
+            padding: 0.5rem 0.8rem;
+            background-color: rgb(130, 164, 238);
+            outline: none;
+            border: none;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+        .otpverify{
+            display: none;
+        }
+    </style>
+</head>
+<body> <h1>Sign In</h1>
+    {% if error %}
+      <p style="color: red;">{{ error }}</p>
+    {% endif %}
+<form accept="{{ url_for('signin') }}" class="container" method="POST">
+    <h1>Sign In</h1><br>
+    <div class="name">
+        <i class="fa-solid fa-user"></i>
+        <span>Username <sub>*</sub></span><br>
+        <input type="text" id="name" required name="name" placeholder="Enter your name..">
+    
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span><br>
+        <div class="form">
+            <input type="text" id="email" name="mail" placeholder="Enter Email...">            
+            <button onclick="" class="btn">Send OTP</button>
+            <!-- <button onclick="sendOTP()" class="btn">Send OTP</button> -->
+        </div>    
+        
+        <div class="otpverify form">
+            <input type="text" id="otp_inp" maxlength="6" placeholder="Enter the 6-digits OTP sent to your Email...">
+            <button class="btn" id="otp-btn">Verify</button>
+        </div>
+        <i class="fa-solid fa-lock"></i>
+                <span>Password</span><br>
+                <input type="password" id="password" name="password" placeholder="*********">
+                <br>
+
+            <div class="usertype">
+                <i class="fa-solid fa-key"></i>
+                <span>User Type</span>
+                <select name="user_type" id="">
+                    <option value="Patient">Patient</option>
+                    <option value="Doctor">Doctor</option>
+                </select>
+            </div>
+           
+            <br>
+            <input type="submit" onclick="" class="signin" value="Signin"> </input>
+            <!-- <input type="submit" onclick="mongo()" class="signin"> <code> Sign Up</code></input> -->
+            <br>
+
+            <span>Already hvae an account?<a href="{{ url_for('login')}}">Log in</a></span>
+        </div>
+</form>
+{{ success }}
+</body>
+</html>
